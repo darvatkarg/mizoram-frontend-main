@@ -1,7 +1,5 @@
 const protocol = "https";
-// const host = "api.elibrarysmartcityadmin.education";
-const host = "api.elibrarysmartcity.mizoram.gov.in"
-// const host = "103.86.177.17"
+const host = "api.elibrarysmartcityadmin.education";
 const port = "";
 const trailUrl = "";
 
