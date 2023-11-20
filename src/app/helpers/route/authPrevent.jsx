@@ -11,7 +11,7 @@ const AuthPrevented = ({ component: Component, ...rest }) => (
       ) : (
         <Redirect
           to={{
-            pathname: "/home",
+            pathname: "/dashboard",
             state: { from: props.location },
           }}
         />
