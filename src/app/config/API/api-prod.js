@@ -1,5 +1,7 @@
 const protocol = "https";
+// const protocol = "http";
 const host = "api.elibrarysmartcityadmin.education";
+// const host = "localhost:3000";
 const port = "";
 const trailUrl = "";
 

@@ -206,6 +206,7 @@ const My_Library = ({ props }) => {
       .then(async (res) => {
         console.log(res);
         fetchData(bookdetails._id);
+        toast.success("Review successfully added")
         setRating();
         setComment("");
       })
@@ -213,7 +214,8 @@ const My_Library = ({ props }) => {
         if (err?.status == 410) {
           // refreshtoken();
         } else {
-          toast.error(err?.message);
+          // toast.error(err?.message);
+          toast.error("Rating is required");
         }
       });
   };
@@ -537,7 +539,7 @@ const My_Library = ({ props }) => {
                           </p>
                           <p className="mx-3">
                             {item.feedback_rating === 1 ? (
-                              <>
+                            <>
                                 <AiFillStar color="#FFBA68" className="mx-1" />
                                 <AiOutlineStar
                                   color="#FFBA68"
