@@ -206,7 +206,7 @@ const My_Library = ({ props }) => {
       .then(async (res) => {
         console.log(res);
         fetchData(bookdetails._id);
-        toast.success("Review successfully added")
+        toast.success("Review successfully added");
         setRating();
         setComment("");
       })
@@ -215,7 +215,11 @@ const My_Library = ({ props }) => {
           // refreshtoken();
         } else {
           // toast.error(err?.message);
-          toast.error("Rating is required");
+          if (comment === "") {
+            toast.error("Comment is required");
+          } else {
+            toast.error("Rating is required");
+          }
         }
       });
   };
@@ -487,7 +491,7 @@ const My_Library = ({ props }) => {
                       ""
                     )}
                     {bookdetails.video &&
-                      !bookdetails.video.includes("undefined") ? (
+                    !bookdetails.video.includes("undefined") ? (
                       <a
                         // target="_blank"
                         // href={Bucket + bookdetails.video}
@@ -539,7 +543,7 @@ const My_Library = ({ props }) => {
                           </p>
                           <p className="mx-3">
                             {item.feedback_rating === 1 ? (
-                            <>
+                              <>
                                 <AiFillStar color="#FFBA68" className="mx-1" />
                                 <AiOutlineStar
                                   color="#FFBA68"
@@ -820,7 +824,7 @@ const My_Library = ({ props }) => {
           // onHide={() => setModal(!modal)}
           backdrop="static"
           size="xl"
-        // aria-labelledby="example-modal-sizes-title-lg"
+          // aria-labelledby="example-modal-sizes-title-lg"
         >
           <Modal.Header closeButton onClick={() => setModal(!modal)}>
             <Modal.Title
